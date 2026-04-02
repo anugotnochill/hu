@@ -39,8 +39,11 @@ section.active {
 #page3 { background: url('bg3.jpg') center/cover no-repeat; }
 #page4 { background: url('bg4.jpg') center/cover no-repeat; }
 
-/* PAGE 5 = YOUR SCRAPBOOK BG */
-#page5 { background: url('scrapbook.jpg') center/cover no-repeat; }
+/* PAGE 5 (POSTER STYLE) */
+#page5 {
+    background: url('scrapbook.jpg') center/contain no-repeat;
+    background-color: black;
+}
 
 #page6 { background: url('bg6.jpg') center/cover no-repeat; }
 
@@ -49,7 +52,7 @@ section::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.35);
+    background: rgba(0,0,0,0.3);
 }
 
 /* FRAME */
@@ -135,7 +138,7 @@ button:hover {
 </div>
 </section>
 
-<!-- PAGE 5 (NO TEXT, ONLY BG + BUTTON) -->
+<!-- PAGE 5 (POSTER BG ONLY) -->
 
 <section id="page5">
 <div class="frame">

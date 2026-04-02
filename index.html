@@ -39,9 +39,12 @@ section.active {
 #page3 { background: url('bg3.jpg') center/cover no-repeat; }
 #page4 { background: url('bg4.jpg') center/cover no-repeat; }
 
-/* PAGE 5 (POSTER STYLE) */
+/* PAGE 5 (POSTER FIXED) */
 #page5 {
-    background: url('scrapbook.jpg') center/contain no-repeat;
+    background-image: url('scrapbook.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: black;
 }
 
@@ -53,6 +56,11 @@ section::before {
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.3);
+}
+
+/* REMOVE OVERLAY ONLY ON PAGE 5 */
+#page5::before {
+    background: none;
 }
 
 /* FRAME */
@@ -122,7 +130,7 @@ button:hover {
 <section id="page3">
 <div class="frame">
 <h1>HAPPIEST BIRTHDAY MERA AKSHU</h1>
-<h2>you’re the best thing that’s ever happened to me 💖</h2>
+<h2>you're the bestest thing happened to me 💖</h2>
 <button onclick="go('page4')">NEXT</button>
 </div>
 </section>
@@ -132,25 +140,24 @@ button:hover {
 <section id="page4">
 <div class="frame">
 <h1>you mean so much to me</h1>
-<h2>the cutest, sweetest, hawtest person I know—kisi bhi bkl ko apna pyaara day ruin mat karne dena 😤💖</h2>
-<h2 style="font-size:14px;">tu hi bola tha paragraph nahi likhne 😒</h2>
+<h2>the cutest sweetest hawtest person ik kisi bhi bkl ko apna pyara day ruin krne mat dena!! 💖</h2>
+<h2 style="font-size:14px;">tu ne hi bola tha paragraph nah likhne 😒</h2>
 <button onclick="go('page5')">NEXT</button>
 </div>
 </section>
 
-<!-- PAGE 5 (POSTER BG ONLY) -->
+<!-- PAGE 5 (ONLY BG + BUTTON) -->
 
 <section id="page5">
 <div class="frame">
-
 <button onclick="go('page6')" style="
-position: absolute;
-bottom: 40px;
-left: 50%;
-transform: translateX(-50%);
+position:absolute;
+bottom:40px;
+left:50%;
+transform:translateX(-50%);
 ">
-NEXT </button>
-
+NEXT
+</button>
 </div>
 </section>
 
@@ -160,7 +167,7 @@ NEXT </button>
 <div class="frame">
 <h1>happiest birthday mera baccha</h1>
 <h2>thank you sm for everything cutu 💖</h2>
-<button onclick="go('page1')">again? 😏</button>
+<button onclick="go('page1')">Replay 💖</button>
 </div>
 </section>
 
